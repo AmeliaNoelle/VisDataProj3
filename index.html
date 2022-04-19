@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>World Hunger</title>
+
+       
+        <script src="https://d3js.org/d3.v7.min.js" defer></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Bootstrap JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- Bootstrap CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <link rel = "stylesheet" href="style.css">
+
+        <script src = "app.js" defer></script>
+
+
+    </head>
+
+    <body>
+
+
+    <div class="container">
+
+    <div class ="row justify-content-center">
+      <h1 id="mainTitle">811 Million</h1>
+    </div>
+
+    <div class="row">
+      <h3 id ="subTitle">people across the world go hungry</h3>
+    </div>
+
+    <div class="row">
+      <h2 id = "whyTitle">Why?</h2>
+    </div>
+
+    <div class ="row">
+      <h4 id = "costTitle">Cost of Food Worldwide</h4>
+    </div>
+    <div class="row">
+      <p id="costdesc">The Cost of a Healthy Diet Across the World</p>
+    </div>
+
+    <div class ="row">
+      <div id="app">
+        <div id="chart">
+            <svg></svg>
+        </div>
+        <div id="data">
+            <ul></ul>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="row">
+      <p id-="costblurb">High costs of a healthy diet in many countries means that many people are unable <br> to meet nutrition requirements, which is especially damaging for children and youth.</p>
+    </div>
+
+    <div class="row">
+      <h4 id ="eventsTitle">World Events</h4>
+    </div>
+    
+    <div class="row">
+      <div class="col-8">
+        <div id ="container">
+          <div id="map"></div>
+          
+        </div>
+      </div>
+      <div class="col"></div>
+      <div class="col-2">
+        <div class="container" id="legend">
+          <div class="row" id="legendTitle">World Hunger Index</div>
+          <div class="row">
+            <div class ="col">
+              <div class ="colour" id ="colourOne"></div>
+            </div>
+            <div class="col">
+              <div class ="labels" id="labelOne">Over 75</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class ="col">
+              <div class ="colour" id ="colourTwo"></div>
+            </div>
+            <div class="col">
+              <div class ="labels" id="labelTwo">Over 50</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class ="col">
+              <div class ="colour" id ="colourThree"></div>
+            </div>
+            <div class="col">
+              <div class ="labels" id="labelThree">Over 30</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class ="col">
+              <div class ="colour" id ="colourFour"></div>
+            </div>
+            <div class="col">
+              <div class ="labels" id="labelFour">Over 20</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class ="col">
+              <div class ="colour" id ="colourFive"></div>
+            </div>
+            <div class="col">
+              <div class ="labels" id="labelFive">Over 10</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class ="col">
+              <div class ="colour" id ="colourSix"></div>
+            </div>
+            <div class="col">
+              <div class ="labels" id="labelSix">Over 5</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class ="col">
+              <div class ="colour" id ="colourSeven"></div>
+            </div>
+            <div class="col">
+              <div class ="labels" id="labelSeven">Over 1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div class="row" id="buttons">
+      <div class="col">
+        <button class="btn btn-outline-secondary float-end "id ="battles">Battles</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-secondary float-start"id="disasters">Natural Disasters</button>
+      </div>
+    </div>
+
+    <div id="row">
+      <p id="eventsblurb">Traumatic world events such as frequent conflict and severe weather often disrupt food chains <br>and affect availability and price of food</p>
+    </div>
+    
+    <div class="row">
+      <h4 id="povertyTitle">Poverty</h4>
+    </div>
+    <div class="row">
+      <p id="povertydesc">Poverty Rate by Country as a Percentage of the Population</p>
+    </div>
+
+    <div class="row">
+      <div class="col-8 my-auto">
+        <div class ="float-end" id="graphThree">
+          <div id ="barplot"></div>
+        </div>
+      </div>
+      <div class="col-3 my-auto">
+      <div id="continentSelect">
+            <legend>Choose a Continent</legend>
+            <input type="radio" name="continent" value="africa" id="africa" >Africa<br>
+            <input type="radio" name="continent" value="asia" id ="asia">Asia<br>
+            <input type="radio" name="continent" value="europe" id="europe">Europe<br>
+            <input type="radio" name="continent" value="northamerica" id="northamerica">North America<br>
+            <input type="radio" name="continent" value="southamerica" id="southamerica">South America<br>
+            <input type="radio" name="continent" value="oceania" id="oceania">Oceania<br>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <p id="povertyblurb">Poverty and hunger often go hand in hand as many countries don't provide support for the needy</p>
+    </div>
+
+    <div class="row">
+      <div id="sourcesTitle">Sources</div>
+    </div>
+    <div class="row">
+      <div class="sources">Cost of Food Sources</div>
+    </div>
+    <div class="row">
+      <p>https://www.globaldietarydatabase.org/downloaddataform?token=IlZOYOWHR979iFwVQpacTRtearZStpzdVFeJY4BIx4k<br>https://www.actionagainsthunger.org/world-hunger-facts-statistics</p>
+    </div>
+    <div class="row">
+      <div class="sources">World Events Sources</div>
+    </div>  
+    <div class="row">
+      <p>https://acleddata.com/#/dashboard<br>https://developer.acleddata.com/dashboard/main/<br>http://www.csgnetwork.com/llinfotable.html<br>https://ourworldindata.org/hunger-and-undernourishment</p>
+    </div>
+    <div class="row">
+      <div class="sources">Poverty Sources</div>
+    </div>
+    <div class="row">
+      <p>https://pip.worldbank.org/country-profiles/ZWE</p>
+    </div>
+
+    </div>
+    </body>
+</html>

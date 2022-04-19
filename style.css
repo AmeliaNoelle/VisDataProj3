@@ -1,0 +1,176 @@
+html {
+    font-family: "Hind Siliguri" sans-serif;
+  }
+h1{
+    font-size: 15em;
+    font-weight: 600;
+    color: #800026;
+}
+h2{
+    font-size: 10em;
+    color: #E31A1C;
+}
+h3{
+    font-size: 3em;
+    color: #BD0026;
+}
+h4{
+    font-size: 2em;
+}
+#costTitle{
+    color: #FC4E2A;
+}
+#mainTitle{
+    margin-top: 17%;
+    margin-bottom: -2rem;
+}
+#subTitle{
+    margin-bottom: 27%;
+}
+#whyTitle{
+    margin-bottom: 25%;
+}
+#eventsTitle{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    color: #FD8D3C;
+}
+#povertyTitle{
+    margin-top: 5rem;
+    color: #FEB24C;
+}
+#povertydesc{
+    margin-bottom: 2rem;
+}
+#povertyblurb{
+    margin-top: 2rem;
+}
+.container{
+    text-align: center;
+}
+  #app {
+    display: flex;
+    margin: 2rem 1rem;
+  }
+
+  #chart{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+  }
+  #barplot {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+
+  }
+  #chart,
+  #data {
+    margin: 0 2rem;
+  }
+
+  #container{
+    height: 50%;
+    width: 130%;
+    margin-bottom: 2rem;
+  }
+
+  #map { 
+    height: 40rem;
+  }
+
+  .colour{
+      display: block;
+      width: 20px;
+      height: 20px;
+  }
+  #legend{
+      width: 200px;
+      height: 300px;
+      margin: 2rem;
+  }
+  #legendTitle{
+      font-size: 1.2em;
+      margin-bottom: 0.5rem;
+  }
+  #colourOne{
+      background-color: #800026;
+  }
+  #colourTwo{
+      background-color: #BD0026;
+  }
+  #colourThree{
+      background-color: #E31A1C;
+  }
+  #colourFour{
+      background-color: #FC4E2A;
+  }
+  #colourFive{
+      background-color: #FD8D3C;
+  }
+  #colourSix{
+      background-color: #FEB24C;
+  }
+  #colourSeven{
+      background-color: #FED976;
+  }
+
+  #data ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #data li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .bar {
+    fill: #BD0026;
+  }
+
+  .label {
+    fill: #BD0026;
+  }
+#continentSelect{
+    text-align: left;
+}
+#buttons{
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+div.tooltip {	
+position: absolute;			
+text-align: center;			
+width: 120px;					
+height:80px;					
+padding: 2px;				
+font: 12px sans-serif;		
+background: lightgray;	
+border: 0px;		
+border-radius: 8px;			
+pointer-events: none;			
+}
+div.tooltipbar {	
+    position: absolute;			
+    text-align: center;			
+    width: 120px;					
+    height:40px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: lightgray;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+    }
+    #sourcesTitle{
+        font-size: 1.4rem;
+        margin-top: 10rem;
+    }
+    .sources{
+        font-weight:600;
+    }
